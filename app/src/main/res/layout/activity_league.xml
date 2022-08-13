@@ -68,9 +68,8 @@
             android:fontFamily="@font/montserrat_alternates"
             android:text="@string/mens"
             android:textColor="#FBFBFB"
-            android:textOff="Mens"
-            android:textOn="Mens"
-            tools:ignore="HardcodedText" />
+            android:textOff="@string/mens"
+            android:textOn="@string/mens" />
 
         <ToggleButton
             android:id="@+id/toggleButton2"

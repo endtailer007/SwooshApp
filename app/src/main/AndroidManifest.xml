@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.welcomeactivity">
+    package="com.example.welcomeactivity"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
 
+    <dist:module dist:instant="true" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,21 +16,23 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".LeagueActivity"
-            android:exported="true" />
-        <activity
-            android:name=".welcomeactivity"
+            android:name="com.example.welcomeactivity.WelcomeActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN">
+                </action>
+                <category android:name="android.intent.category.LAUNCHER">
+                </category>
             </intent-filter>
         </activity>
+
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <activity android:name=".LeagueActivity">
+        </activity>
     </application>
 
 </manifest>

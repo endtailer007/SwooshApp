@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".welcomeactivity">
-
+    tools:context="com.example.welcomeactivity.WelcomeActivity">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -80,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getstartedbutton"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
