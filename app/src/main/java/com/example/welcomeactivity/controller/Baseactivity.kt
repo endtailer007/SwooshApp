@@ -1,4 +1,4 @@
-package com.example.welcomeactivity
+package com.example.welcomeactivity.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

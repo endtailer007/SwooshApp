@@ -1,12 +1,11 @@
-package com.example.welcomeactivity
+package com.example.welcomeactivity.controller
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import android.widget.ToggleButton
-import androidx.core.content.ContextCompat.startActivity
+import com.example.welcomeactivity.EXTRA_LEAGUE
+import com.example.welcomeactivity.R
 
 class LeagueActivity : Baseactivity() {
     var selectedLeague=""

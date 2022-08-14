@@ -1,11 +1,9 @@
-package com.example.welcomeactivity
+package com.example.welcomeactivity.controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
+import com.example.welcomeactivity.R
 
 
 class WelcomeActivity : Baseactivity() {
@@ -14,7 +12,7 @@ class WelcomeActivity : Baseactivity() {
         setContentView(R.layout.welcome_activity)
         //val button= findViewById<Button>(R.id.getstartedbutton)
        findViewById<Button>(R.id.getstartedbutton).setOnClickListener{
-            val leagueIntent=Intent(this,LeagueActivity::class.java)
+            val leagueIntent=Intent(this, LeagueActivity::class.java)
            startActivity(leagueIntent)
        }
 
