@@ -12,4 +12,10 @@
     <string name="co_ed">co-ed</string>
     <string name="next">Next</string>
     <string name="womens">Womens</string>
+    <string name="background_view">background_view</string>
+    <string name="i_am_a">I am a:</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="beginner">BEGINNER</string>
+    <string name="baller">BALLER</string>
+    <string name="button">Button</string>
 </resources>
