@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import android.widget.ToggleButton
-import com.example.welcomeactivity.EXTRA_PLAYER
+import com.example.welcomeactivity.utilities.EXTRA_PLAYER
 import com.example.welcomeactivity.R
 import com.example.welcomeactivity.model.Player
 

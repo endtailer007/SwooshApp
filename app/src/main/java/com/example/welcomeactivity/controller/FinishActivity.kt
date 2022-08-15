@@ -3,9 +3,10 @@ package com.example.welcomeactivity.controller
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
-import com.example.welcomeactivity.EXTRA_PLAYER
+import com.example.welcomeactivity.utilities.EXTRA_PLAYER
 import com.example.welcomeactivity.R
 import com.example.welcomeactivity.model.Player
+
 
 class FinishActivity : Baseactivity() {
     @SuppressLint("SetTextI18n")
