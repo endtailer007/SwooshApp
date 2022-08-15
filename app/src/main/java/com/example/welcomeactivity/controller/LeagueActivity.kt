@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import android.widget.ToggleButton
-import com.example.welcomeactivity.EXTRA_LEAGUE
+import com.example.welcomeactivity.EXTRA_PLAYER
 import com.example.welcomeactivity.R
+import com.example.welcomeactivity.model.Player
 
 class LeagueActivity : Baseactivity() {
-    var selectedLeague=""
+    var player=Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
@@ -16,22 +17,22 @@ class LeagueActivity : Baseactivity() {
     fun onMensClicked(view: View){
         findViewById<ToggleButton>(R.id.womensLeagueBtn).isChecked=false
         findViewById<ToggleButton>(R.id.coedLeagueBtn).isChecked=false
-        selectedLeague="Mens"
+        player.league="Mens"
     }
     fun onWomensClicked(view: View){
         findViewById<ToggleButton>(R.id.mensLeagueBtn).isChecked=false
         findViewById<ToggleButton>(R.id.coedLeagueBtn).isChecked=false
-        selectedLeague="Womens"
+        player.league="Womens"
     }
     fun onCoedClicked(view: View){
         findViewById<ToggleButton>(R.id.womensLeagueBtn).isChecked=false
         findViewById<ToggleButton>(R.id.mensLeagueBtn).isChecked=false
-        selectedLeague="Co-ed"
+        player.league="Co-ed"
     }
     fun leagueNextClicked(view:View){
-        if (selectedLeague!="") {
+        if (player.league!="") {
             val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE,selectedLeague)
+            skillActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(skillActivity)
         } else{
           Toast.makeText(this,"Please select a league",Toast.LENGTH_SHORT).show()

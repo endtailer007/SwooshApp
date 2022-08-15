@@ -1,37 +1,35 @@
 package com.example.welcomeactivity.controller
 
-//import androidx.appcompat.app.AppCompatActivity
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import android.widget.ToggleButton
-import com.example.welcomeactivity.EXTRA_LEAGUE
-import com.example.welcomeactivity.EXTRA_SKILL
+import com.example.welcomeactivity.EXTRA_PLAYER
 import com.example.welcomeactivity.R
+import com.example.welcomeactivity.model.Player
 
 class SkillActivity : Baseactivity() {
-    private var league1=""
-    private var skill=""
+    lateinit var player:Player
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league1=intent.getStringExtra(EXTRA_LEAGUE).toString()
-        println(league1)
+        player= intent.getParcelableExtra<Player>(EXTRA_PLAYER)!!
+        println(player)
     }
     fun onBallerclicked(view:View){
         findViewById<ToggleButton>(R.id.beginnerSkillBtn).isChecked=false
-        skill="Baller"
+        player.skill="Baller"
     }
     fun onBeginnerClicked(view: View){
         findViewById<ToggleButton>(R.id.ballerSkillBtn).isChecked=false
-        skill="Beginner"
+        player.skill="Beginner"
     }
     fun onSkillFinishClicked(view:View){
-        if (skill!=""){
+        if (player.skill!=""){
             val finishActivity=Intent(this,FinishActivity::class.java)
-            finishActivity.putExtra(EXTRA_LEAGUE,league1)
-            finishActivity.putExtra(EXTRA_SKILL,skill)
+            finishActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(finishActivity)
         }else{
             Toast.makeText(this,"Please select a skill level",Toast.LENGTH_SHORT).show()
